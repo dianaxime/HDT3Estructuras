@@ -24,11 +24,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Archivo {
+public class Archivo implements Comparable{
     String ruta;
     public void crear(int cant, String nombre){
         try{
-           ruta = "Documentos/"+nombre+".txt*";
+           ruta = "C:\\Users\\DIANA\\Documents\\"+nombre+".txt";
             File archivo = new File(ruta);
 
             if (!archivo.exists()){
@@ -39,7 +39,7 @@ public class Archivo {
             BufferedWriter archivob = new BufferedWriter(archivow);
 
             for (int i=0; i<cant; i++){
-                archivob.write(aleatorio(10000));
+                archivob.write(Integer.toString(aleatorio(10000)));
                 archivob.write(",");
             } 
             archivob.close();
@@ -49,6 +49,10 @@ public class Archivo {
         }
         
     }
+    @Override
+    public int compareTo(Object other){
+        return 0; //solo para implementar los metodos de la interfaz
+    }
     
     public int aleatorio(int max){
         Random numero =new Random(System.currentTimeMillis());
@@ -56,8 +60,8 @@ public class Archivo {
         return alazar;
     }
     
-    public int[] leer(){
-        int[] miarray = new int[0];
+    public Comparable[] leer(){
+        Comparable[] miarray = new Comparable[0];
         try{
             FileReader lector;
             BufferedReader lector1;
@@ -71,7 +75,7 @@ public class Archivo {
                 while (datos!=null){
                     //elimina las comas
                    String partes[] = datos.split(",");
-                   miarray = new int[partes.length-1];
+                   miarray = new Comparable[partes.length-1];
                    //recorre las partes 
                    for (int i=0; i<partes.length; i++){
                        //si es un operador extrae los valores y realiza la operacion

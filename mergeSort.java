@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class mergeSort {
     
-    public void mergesort(int[] miarray){
+    public void mergesort(Comparable[] miarray){
         
         /*if (left<right){
             int num = (left+right)/2;
@@ -27,21 +27,21 @@ public class mergeSort {
         }*/
         if (miarray.length>1){
             int num = miarray.length/2;
-            int[] left = Arrays.copyOfRange(miarray, 0, num-1);
-            int[] right = Arrays.copyOfRange(miarray, num, miarray.length-1);
+            Comparable[] left = Arrays.copyOfRange(miarray, 0, num-1);
+            Comparable[] right = Arrays.copyOfRange(miarray, num, miarray.length-1);
             mergesort(left);
             mergesort(right);
             merge(miarray, left, right);
         }
     }
-    public void merge(int[] miarray, int[] izquierda, int[] derecha){
+    public void merge(Comparable[] miarray, Comparable[] izquierda, Comparable[] derecha){
         int total=izquierda.length+derecha.length;
         int i = 0;
         int li = 0;
         int ri = 0;
         while (i<total){
             if ((li<izquierda.length) && (ri<derecha.length)){
-                if (izquierda[li]<derecha[ri]){
+                if (izquierda[li].compareTo(derecha[ri])==-1){
                     miarray[i] = izquierda[li];
                     i++;
                     li++;

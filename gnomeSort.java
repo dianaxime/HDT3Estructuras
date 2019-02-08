@@ -15,17 +15,17 @@ Fatima Jazmin Albeño Barrios
  */
 public class gnomeSort {
     
-    public void ordenar(int[] miarray){
+    public void ordenar(Comparable[] miarray){
         
         int cont = 1;
         
         while(cont<miarray.length){
             
-            if (miarray[cont-1]<= miarray[cont]){
+            if (miarray[cont-1].compareTo(miarray[cont])<=0){
                 cont++;
             }
             else{
-                int num = miarray[cont-1];
+                Comparable num = miarray[cont-1];
                 miarray[cont-1] = miarray[cont];
                 miarray[cont] = num;
                 if (--cont==0){
