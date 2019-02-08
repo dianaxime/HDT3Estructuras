@@ -13,12 +13,12 @@ Fatima Jazmin Albeño Barrios
  * @author DIANA
  */
 public class bubbleSort {
-    public void bubble(int[] miarray){
+    public void bubble(Comparable[] miarray){
         int num = miarray.length;
-        int aux = 0;
+        Comparable aux;
         for (int i=0; i<num; i++){
             for (int j=1; j<(num-i); j++){
-               if (miarray[j-1]>miarray[j]){
+               if (miarray[j-1].compareTo(miarray[j])==1){
                    aux = miarray[j-1];
                    miarray[j-1] = miarray[j];
                    miarray[j] = aux;

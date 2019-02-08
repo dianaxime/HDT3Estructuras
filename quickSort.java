@@ -14,16 +14,16 @@ Fatima Jazmin Albeño Barrios
  */
 public class quickSort {
     
-    public void quick(int[] miarray, int left, int right){
-        int pivote = miarray[left];
+    public void quick(Comparable[] miarray, int left, int right){
+        Comparable pivote = miarray[left];
         int i = left;
         int j = right;
-        int aux;
+        Comparable aux;
         while(i<j){
-            while(miarray[i]<=pivote && i<j){
+            while(miarray[i].compareTo(pivote)<=0 && i<j){
                 i++;
             }
-            while(miarray[j]>pivote){
+            while(miarray[j].compareTo(pivote)==1){
                 j--;
             }
             if (i<j){
