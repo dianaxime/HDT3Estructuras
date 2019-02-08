@@ -42,6 +42,7 @@ public class Archivo {
                 archivob.write(aleatorio(10000));
                 archivob.write(",");
             } 
+            archivob.close();
         }
         catch( IOException | NumberFormatException e){
             
@@ -79,6 +80,7 @@ public class Archivo {
                    //lee otra linea
                    datos= lector1.readLine();
                 }
+                lector1.close();
         }
         catch( IOException | NumberFormatException e){
             
