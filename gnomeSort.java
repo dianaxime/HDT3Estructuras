@@ -5,6 +5,10 @@
  */
 package hdt3;
 
+/*Integrantes:
+Diana Ximena de Leon Figueroa
+Fatima Jazmin Albeño Barrios
+*/
 /**
  *
  * @author DIANA
