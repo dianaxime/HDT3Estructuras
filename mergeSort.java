@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class mergeSort {
     
-    public void mergesort(int[] miarray) throws IOException{
+    public void mergesort(int[] miarray){
         
         /*if (left<right){
             int num = (left+right)/2;
