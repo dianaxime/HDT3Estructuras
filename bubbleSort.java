@@ -14,7 +14,7 @@ Randy Samuel Venegas Lorenti 18341
  * @author DIANA
  */
 public class bubbleSort {
-    public void bubble(Comparable[] miarray){
+    public Comparable[] bubble(Comparable[] miarray){
         int num = miarray.length;
         Comparable aux;
         for (int i=0; i<num; i++){
@@ -26,5 +26,6 @@ public class bubbleSort {
                } 
             }
         }
+        return miarray;
     }
 }

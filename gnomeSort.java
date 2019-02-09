@@ -16,7 +16,7 @@ Randy Samuel Venegas Lorenti 18341
  */
 public class gnomeSort {
     
-    public void ordenar(Comparable[] miarray){
+    public Comparable[] ordenar(Comparable[] miarray){
         
         int cont = 1;
         
@@ -34,5 +34,6 @@ public class gnomeSort {
                 }
             }
         } 
+        return miarray;
     }  
 }

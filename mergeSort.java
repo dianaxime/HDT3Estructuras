@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class mergeSort {
     
-    public void mergesort(Comparable[] miarray){
+    public Comparable[] mergesort(Comparable[] miarray){
     
         /*if (left<right){
             int num = (left+right)/2;
@@ -34,8 +34,9 @@ public class mergeSort {
             mergesort(right);
             merge(miarray, left, right);
         }
+        return miarray;
     }
-    public void merge(Comparable[] miarray, Comparable[] izquierda, Comparable[] derecha){
+    public Comparable[] merge(Comparable[] miarray, Comparable[] izquierda, Comparable[] derecha){
         int total=izquierda.length+derecha.length;
         int i = 0;
         int li = 0;
@@ -70,5 +71,6 @@ public class mergeSort {
                 }
             }
         }
+        return miarray;
     }
 }

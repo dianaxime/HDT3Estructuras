@@ -78,11 +78,11 @@ public class Archivo implements Comparable{
                 while (datos!=null){
                     //elimina las comas
                    String partes[] = datos.split(",");
-                   miarray = new Comparable[partes.length-1];
+                   miarray = new Comparable[partes.length];
                    //recorre las partes 
                    for (int i=0; i<partes.length; i++){
                        //si es un operador extrae los valores y realiza la operacion
-                       miarray[i]= Integer.parseInt(partes[i]);
+                       miarray[i]= Integer.parseInt((String)partes[i]);
                    }
                    //lee otra linea
                    datos= lector1.readLine();
