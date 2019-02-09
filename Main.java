@@ -197,7 +197,7 @@ public class Main extends javax.swing.JFrame {
         }
         else if (jRadioButton2.isSelected()){
             mergeSort merges = new mergeSort();
-            fin = merges.mergesort(usararchivo.leer());
+            fin = merges.mergesort(usararchivo.leer(), 0, usararchivo.leer().length-1);
         }
         else if (jRadioButton3.isSelected()){
             quickSort quicks = new quickSort();

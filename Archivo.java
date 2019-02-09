@@ -10,6 +10,10 @@ package hdt3;
 Diana Ximena de Leon Figueroa 18607
 Fatima Jazmin Albeño Barrios 18060
 Randy Samuel Venegas Lorenti 18341
+
+Miercoles 6 de febrero de 2019
+
+//Escritura y lectura de archivo .TXT
 */
 /**
  *
