@@ -33,16 +33,18 @@ public class Archivo implements Comparable{
     String ruta;
     public void crear(int cant, String nombre){
         try{
+            //direccion para guardar el documento
            ruta = "C:\\Users\\DIANA\\Documents\\"+nombre+".txt";
+           //crea un nuevo archivo en esa direccion
             File archivo = new File(ruta);
-
+            //lo crea solo si el archivo no existe 
             if (!archivo.exists()){
                 archivo.createNewFile();
             }
 
             FileWriter archivow = new FileWriter(archivo);
             BufferedWriter archivob = new BufferedWriter(archivow);
-
+            //genera la cantidad de numeros aleatorios definida por el usuario
             for (int i=0; i<cant; i++){
                 archivob.write(Integer.toString(aleatorio(100*i+10)));
                 archivob.write(",");
@@ -60,6 +62,7 @@ public class Archivo implements Comparable{
     }
     
     public int aleatorio(int max){
+        //genera un numero aleatorio 
         Random numero = new Random(System.currentTimeMillis());
         int alazar = numero.nextInt(max);
         //numero.setSeed(System.currentTimeMillis());
@@ -68,6 +71,7 @@ public class Archivo implements Comparable{
     }
     
     public Comparable[] leer(){
+        //lee el archivo TXT con los numeros 
         Comparable[] miarray = new Comparable[0];
         try{
             FileReader lector;
@@ -85,7 +89,7 @@ public class Archivo implements Comparable{
                    miarray = new Comparable[partes.length];
                    //recorre las partes 
                    for (int i=0; i<partes.length; i++){
-                       //si es un operador extrae los valores y realiza la operacion
+                       //agrega los numeros al array
                        miarray[i]= Integer.parseInt((String)partes[i]);
                    }
                    //lee otra linea

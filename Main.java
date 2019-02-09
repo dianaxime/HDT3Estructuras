@@ -15,7 +15,7 @@ Randy Samuel Venegas Lorenti 18341
  */
 public class Main extends javax.swing.JFrame {
 
-    
+    //Instanciar clase mi archivo
     Archivo usararchivo = new Archivo();
     /**
      * Creates new form Main
@@ -180,17 +180,23 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //Crea un nuevo txt con la cantidad de numeros aleatorios proporcionados por el slider
+        // y con el nombre en la caja de texto
         usararchivo.crear(jSlider1.getValue(), jTextField1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         // TODO add your handling code here:
+        //Muestra el valor del slider
         jLabel1.setText("Cantidad de numeros: "+jSlider1.getValue());
     }//GEN-LAST:event_jSlider1StateChanged
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        //Array a mostrar 
         Comparable[] fin = new Comparable[0];
+        //Dependiendo de cual este seleccionado asi sera el sort que usara
+        //Solo uno a la vez, estara seleccionado
         if (jRadioButton1.isSelected()){
             gnomeSort gnomes = new gnomeSort();
             fin = gnomes.ordenar(usararchivo.leer());
@@ -212,10 +218,14 @@ public class Main extends javax.swing.JFrame {
             fin= bubbles.bubble(usararchivo.leer());
         }
         else{
+            // si no hay ninguno seleccionado muestra un mensaje de advertencia 
             jOptionPane1.showMessageDialog(null, "Por favor seleccione una opcion", "Advertencia", jOptionPane1.WARNING_MESSAGE);
         }
+        //permite editar el cuadro de texto
         jTextArea1.setEditable(true);
+        //recorre el array para poderlo mostrar
         for (int i=1; i<=fin.length; i++){
+            //cuando tenga 10 elementos hace cambio de linea 
             if (i%10==0){
                 jTextArea1.append(fin[i-1] + "\n");
             }
@@ -227,6 +237,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        //borra los datos del cuadro de texto
         jTextArea1.setEditable(true);
         jTextArea1.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
