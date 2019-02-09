@@ -5,20 +5,21 @@
  */
 package hdt3;
 /*Integrantes:
-Diana Ximena de Leon Figueroa
-Fatima Jazmin Albeño Barrios
+Diana Ximena de Leon Figueroa 18607
+Fatima Jazmin Albeño Barrios 18060
+Randy Samuel Venegas Lorenti 18341
 */
 /**
  *
  * @author DIANA
  */
 import java.util.Arrays;
-import java.io.IOException;
+//import java.io.IOException;
 
 public class mergeSort {
     
     public void mergesort(Comparable[] miarray){
-        
+    
         /*if (left<right){
             int num = (left+right)/2;
             mergesort(miarray, left, num);

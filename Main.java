@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package hdt3;
-
+/*Integrantes:
+Diana Ximena de Leon Figueroa 18607
+Fatima Jazmin Albeño Barrios 18060
+Randy Samuel Venegas Lorenti 18341
+*/
 /**
  *
  * @author DIANA
@@ -30,6 +34,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -91,21 +96,18 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton3)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2))
+                        .addGap(49, 49, 49)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton5)
+                            .addComponent(jRadioButton4)))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jRadioButton3)
-                            .addGap(140, 140, 140))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRadioButton1)
-                                .addComponent(jRadioButton2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRadioButton5)
-                                .addComponent(jRadioButton4))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jButton1)
@@ -116,7 +118,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addGap(18, 18, 18)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,6 +185,10 @@ public class Main extends javax.swing.JFrame {
             bubbleSort bubbles = new bubbleSort();
             bubbles.bubble(usararchivo.leer());
         }
+        else{
+            jOptionPane1.showMessageDialog(null, "Por favor seleccione una opcion", "Advertencia", jOptionPane1.WARNING_MESSAGE);
+
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -226,6 +232,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

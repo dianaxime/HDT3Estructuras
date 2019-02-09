@@ -6,8 +6,9 @@
 package hdt3;
 
 /*Integrantes:
-Diana Ximena de Leon Figueroa
-Fatima Jazmin Albeño Barrios
+Diana Ximena de Leon Figueroa 18607
+Fatima Jazmin Albeño Barrios 18060
+Randy Samuel Venegas Lorenti 18341
 */
 /**
  *

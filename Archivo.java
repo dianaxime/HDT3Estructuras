@@ -7,8 +7,9 @@ package hdt3;
 
 
 /*Integrantes:
-Diana Ximena de Leon Figueroa
-Fatima Jazmin Albeño Barrios
+Diana Ximena de Leon Figueroa 18607
+Fatima Jazmin Albeño Barrios 18060
+Randy Samuel Venegas Lorenti 18341
 */
 /**
  *
@@ -39,7 +40,7 @@ public class Archivo implements Comparable{
             BufferedWriter archivob = new BufferedWriter(archivow);
 
             for (int i=0; i<cant; i++){
-                archivob.write(Integer.toString(aleatorio(10000)));
+                archivob.write(Integer.toString(aleatorio(100*i+10)));
                 archivob.write(",");
             } 
             archivob.close();
@@ -55,8 +56,10 @@ public class Archivo implements Comparable{
     }
     
     public int aleatorio(int max){
-        Random numero =new Random(System.currentTimeMillis());
+        Random numero = new Random(System.currentTimeMillis());
         int alazar = numero.nextInt(max);
+        //numero.setSeed(System.currentTimeMillis());
+        //numero.setSeed(numero.nextInt());
         return alazar;
     }
     
