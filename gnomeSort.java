@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hdt3;
+//package hdt3;
 
 /*Integrantes:
 Diana Ximena de Leon Figueroa 18607
